@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+$primaryFont: 'Space Mono',
+monospace;
+
+//Primary color
+$primaryColor: hsl(172, 67%, 45%);
+
+//Neutal colors 
+$whiteBg: hsl(0, 0%, 100%);
+$lightGrayishCyan: hsl(189, 41%, 97%);
+$lightGrayishCyan_2: hsl(185, 41%, 84%);
+$darkGrayish: hsl(184, 14%, 56%);
+$darkGrayish_2: hsl(186, 14%, 43%);
+$veryDarkGrayish: hsl(183, 100%, 15%);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $primaryFont;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    max-height: 100vh;
+    background-color: $lightGrayishCyan_2;
+}
+
+.brand {
+    text-align: center;
+    color: $darkGrayish_2;
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: $veryDarkGrayish;
+    font-weight: 700;
+}
+
+.container {
+    margin: 3% 0;
+}
+
+.calculator__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5%;
+    padding: 5%;
+    width: 700px;
+    font-size: 14px;
+    font-family: $primaryFont;
+    background-color: $whiteBg;
+    border-radius: 10px;
+
+    .tip {
+        position: relative;
+        padding: 5% 0;
+
+        input {
+            width: 300px;
+            padding: 3% 0;
+            border: 0;
+            outline: 0;
+            border-radius: 10px;
+            text-align: right;
+            font-size: 18px;
+            font-weight: 700;
+            font-family: $primaryFont;
+            background-color: $lightGrayishCyan;
+        }
+
+        input:focus {
+            color: $primaryColor;
+            border: 3px solid;
+            border-radius: 10px;
+        }
+
+        .fas {
+            position: absolute;
+            z-index: 2;
+            top: 40%;
+            left: 5%;
+            color: $darkGrayish
+        }
+    }
+    
+    .percent_grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 5% 0;
+
+        button {
+            background-color: $veryDarkGrayish;
+            color: $whiteBg;
+            width: 100%;
+            padding: 10px;
+            border: 0;
+            border-radius: 5px;
+            font-family: $primaryFont;
+            font-weight: 700;
+        }
+
+        .custom {
+            background-color: $lightGrayishCyan;
+            color: $veryDarkGrayish;
+            width: 100px;
+            border: 0;
+            outline: 0;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 17px;
+            font-weight: 700;
+            text-align: center;
+        }
+    }
+
+    .result {
+        background-color: $veryDarkGrayish;
+        padding: 5% 10%;
+        color: $whiteBg;
+        border-radius: 10px;
+
+        .amount {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+                font-size: 25px;
+                font-weight: 700;
+                color: $primaryColor;
+            }
+
+            span {
+                color: $darkGrayish
+            }
+        }
+
+        button {
+            background-color: $primaryColor;
+            opacity: 30%;
+            width: 100%;
+            border: 0;
+            border-radius: 5px;
+            padding: 5% 0;
+            margin-top: 30%;
+            cursor: pointer;
+        }
+    }
+
+    button:hover{
+        background-color: $primaryColor;
+        opacity: 100%;
+    }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="brand"> SPLI <br> TTER </h1>
+    
+    <div class="calculator__container">
+      <!-- The tip calculator -->
+      <form class="calculate">
+
+        <div class="tip-wrapper">
+          <label> Bill </label>
+          <label for="billAmount" class="errorLabel" id="billError"></label>
+          <!-- Tips input-->
+          <div class="tip">
+            <i class="fas fa-dollar-sign"></i>
+            <input type="number" name="tipAmount" id="tipAmount" placeholder="0">
+          </div>
+        </div>
+
+        <!-- Tips percentage grids -->
+        <div class="tip-wrapper">
+          <label> Select Tip % </label>
+          <div class="percent_grid">
+            <div class="tips-grids">
+              <button type="button" class="tipButton activeButton default"> 5% </button>
+            </div>
+            <div class="tips-grids">
+              <button type="button" class="tipButton"> 10% </button>
+            </div>
+            <div class="tips-grids">
+              <button type="button" class="tipButton"> 15% </button>
+            </div>
+            <div class="tips-grids">
+              <button type="button" class="tipButton"> 25% </button>
+            </div>
+            <div class="tips-grids">
+              <button type="button" class="tipButton"> 50% </button>
+            </div>
+            <div class="tips-grids">
+              <input type="number" class="custom" placeholder="Custom" />
+            </div>
+          </div>
+        </div>
+
+        <div class="tip-wrapper">
+          <label> Number of People </label>
+          <label for="noOfPeople" class="errorLabel" id="peopleError"></label>
+          <div class="tip">
+            <i class="fas fa-user"></i>
+            <input type="number" name="numPeople" id="numPeople" placeholder="0">
+          </div>
+        </div>
+
+      </form>
+
+      <!-- This shows the tip calculator results -->
+      <div class="result">
+        <div class="amount">
+          <label> Tip Amount <br>
+           <span> / person </span></label>
+
+          <p id="perPerson"> $0.00 </p>
+        </div>
+
+        <div class="amount">
+          <label> Total <br>
+          <span> / person </span></label>
+          <p id="totalPerson"> $0.00 </p>
+        </div>
+
+        <button class="reset" type="reset"> Reset </button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Code With Mercy</a>.
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
+
+0107605484
